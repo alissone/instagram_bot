@@ -54,10 +54,10 @@ def load_session(filename="instagram_session"):
 
 def build_driver(new_session=True):
     options = webdriver.ChromeOptions()
-    options.binary_location = '/home/alisson/Programas/chrome-linux/chrome'
+    options.binary_location = '~/Programas/chrome-linux/chrome'
     options.add_experimental_option("detach", True)
-    #options.add_argument("user-data-dir=/home/alisson/.config/chromium/Default") #Path to your chrome profile
-    chrome_driver_binary = '/home/alisson/Programas/chromedriver'
+    #options.add_argument("user-data-dir=~/.config/chromium/Default") #Path to your chrome profile
+    chrome_driver_binary = '~/Programas/chromedriver'
 
     if new_session:
         return webdriver.Chrome(chrome_driver_binary, options=options)
